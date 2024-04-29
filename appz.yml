@@ -15,7 +15,6 @@ deploy:
   port: 
     - 9000
     - 9001
-    - 9002
 volumes:
 - claim: minio-data
   mount: /appz/data
@@ -29,5 +28,5 @@ properties:
   MINIO_ROOT_PASSWORD: 
     vault: MINIO_ROOT_PASSWORD
   MINIO_ROOT_USER: minioadmin
-  #MINIO_BROWSER : on
+  MINIO_BROWSER : on
   revision: 1

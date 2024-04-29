@@ -1,0 +1,30 @@
+app: 
+  code: MINIO
+  name: minio
+  notify: srswain@ecloudcontrol.com
+build: 
+  build_file: none
+  env: DEV
+  image_template: minio-2.0
+  output_files: output/*.zip
+  version: 2.0
+deploy: 
+  context: sranjan1995/DEV
+  type: statefulset
+  replicas: 1
+  port: 
+    - 9000
+volumes:
+- claim: minio-data
+  mount: /appz/data
+  name: data
+  size: 5Gi
+- claim: minio-backup
+  mount: /appz/backup
+  name: backup
+  size: 5Gi
+properties: 
+  MINIO_ROOT_PASSWORD: 
+    vault: MINIO_ROOT_PASSWORD
+  MINIO_ROOT_USER: minioadmin
+  revision: 0

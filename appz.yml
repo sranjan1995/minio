@@ -11,6 +11,7 @@ build:
 deploy: 
   context: sranjan1995/DEV
   type: statefulset
+  ingress: none
   replicas: 1
   port: 
     - 9001

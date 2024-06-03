@@ -18,11 +18,11 @@ deploy:
     - 9000
 volumes:
 - claim: minio-data
-  mount: /appz/tmp
+  mount: /appz/data
   name: data
   size: 5Gi
 - claim: minio-backup
-  mount: /appz/tmp
+  mount: /appz/data
   name: backup
   size: 5Gi
 properties: 

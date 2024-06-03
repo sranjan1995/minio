@@ -17,12 +17,12 @@ deploy:
     - 9001
     - 9000
 volumes:
-- claim: minio-data1
-  mount: /appz/smruti
+- claim: minio-data
+  mount: /appz/tmp
   name: data
   size: 5Gi
-- claim: minio-backup1
-  mount: /appz/backup1
+- claim: minio-backup
+  mount: /appz/tmp
   name: backup
   size: 5Gi
 properties: 

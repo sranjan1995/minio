@@ -22,7 +22,7 @@ volumes:
   name: data
   size: 5Gi
 - claim: minio-backup
-  mount: /appz/data
+  mount: /appz/backup
   name: backup
   size: 5Gi
 properties: 
@@ -30,4 +30,4 @@ properties:
     vault: MINIO_ROOT_PASSWORD
   MINIO_ROOT_USER: minioadmin
   MINIO_BROWSER : on
-  revision: 18
+  revision: 19

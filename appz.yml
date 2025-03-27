@@ -29,4 +29,4 @@ properties:
     vault: MINIO_ROOT_PASSWORD
   MINIO_ROOT_USER: minioadmin
   MINIO_BROWSER : on
-  revision: 4
+  revision: 5
